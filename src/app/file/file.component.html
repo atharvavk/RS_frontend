@@ -1,0 +1,22 @@
+<div class="col" style="min-width: 20%; max-width: 20%; height: 85px">
+  <div class="dropdown">
+    <button
+      class="btn dropdown-toggle"
+      data-toggle="dropdown"
+      aria-expanded="false"
+      type="button"
+    >
+      <img src="assets/img/file.png" />
+      {{ filename }}
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" (click)="setSourcePath(true)">Copy</a>
+      <a class="dropdown-item" (click)="setSourcePath(false)">Cut</a>
+      <a class="dropdown-item" (click)="toggleSharingStatus()"
+        >Toggle Sharing</a
+      >
+      <a class="dropdown-item" (click)="deleteThis()">Delete</a>
+      <a class="dropdown-item" (click)="download()">Download</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+<!-- <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <div>
+      <input
+        type="file"
+        (change)="selectedFiles($event)"
+        placeholder="Upload a file"
+      />
+    </div>
+    <div *ngIf="sourcePath != ''">
+      <button (click)="pasteHere()">Paste</button>
+    </div>
+    <div>
+      Create a new Folder : <input type="text" [(ngModel)]="newDir" />
+      <input type="button" value="create" (click)="mkdir()" />
+      <div *ngIf="pwd != '.'">
+        <button (click)="parentDirectory()">Move Up a directory</button>
+      </div>
+    </div>
+  </div> -->
+<!-- <a href="#about">About</a> -->
+<!-- </div>
+<span style="font-size: 30px; cursor: pointer" (click)="openNav()"
+  >&#9776; open</span
+> -->
+<!-- <div>
+  <h4>This is the file List</h4> -->
+<!-- <div class="container"> -->
+<!-- <div class="row">
+    <app-file *ngFor="let file of Files" name="{{ file }}"></app-file>
+  </div> -->
+<!-- </div> -->
+<!-- <br />
+  <br />
+  <h4>This is the Directory List</h4> -->
+<!-- <div class="container"> -->
+<!-- <div class="row">
+    <app-directory *ngFor="let dir of Dirs" name="{{ dir }}"></app-directory>
+  </div> -->
+<!-- </div> -->
+<!-- <br />
+  <br />
+</div> -->
+
+<!-- <h6>Upload a file</h6>
+<input type="file" (change)="selectedFiles($event)" placeholder="Upload file" />
+<br />
+<br />
+Create a new Folder : <input type="text" [(ngModel)]="newDir" />
+<input type="button" value="create" (click)="mkdir()" />
+<br />
+<br />
+<div *ngIf="sourcePath != ''"><button (click)="pasteHere()">Paste</button></div> -->
+
+<nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+  <div class="container">
+    <a class="navbar-brand">Directory List</a
+    ><button
+      data-toggle="collapse"
+      class="navbar-toggler"
+      data-target="#navcol-1"
+    >
+      <span class="sr-only">Toggle navigation</span
+      ><span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navcol-1">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <div *ngIf="pwd != '.'">
+            <button class="nav-btn" (click)="parentDirectory()">
+              Move Up a directory
+            </button>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle"
+              data-toggle="dropdown"
+              aria-expanded="false"
+              type="button"
+            >
+              Upload a File
+            </button>
+            <div class="dropdown-menu">
+              <input
+                class="dropdown-item"
+                type="file"
+                (change)="selectedFiles($event)"
+                placeholder="Upload a file"
+                value="Upload"
+              />
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"></li>
+      </ul>
+      <form class="form-inline mr-auto" target="_self">
+        <div class="form-group"><label for="search-field"></label></div>
+      </form>
+      <input
+        type="text"
+        id="search-field"
+        name="search"
+        placeholder="Create New Directory"
+        [(ngModel)]="newDir"
+      /><a (click)="mkdir()"><button class="btn">Create a directory</button></a>
+    </div>
+  </div>
+</nav>
+
+<br /><br />
+
+<div class="container">
+  <div class="row">
+    <app-directory *ngFor="let dir of Dirs" name="{{ dir }}"></app-directory>
+  </div>
+</div>
+<br /><br />
+<nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+  <div class="container">
+    <a class="navbar-brand" href="#">File list</a
+    ><button
+      data-toggle="collapse"
+      class="navbar-toggler"
+      data-target="#navcol-2"
+    >
+      <span class="sr-only">Toggle navigation</span
+      ><span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navcol-2">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
+      </ul>
+      <form class="form-inline mr-auto" target="_self">
+        <div class="form-group"><label for="search-field"></label></div>
+      </form>
+    </div>
+  </div>
+</nav>
+<br /><br />
+<div class="container">
+  <div class="row">
+    <app-file *ngFor="let file of Files" name="{{ file }}"></app-file>
+  </div>
+</div>
