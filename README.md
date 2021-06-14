@@ -1,4 +1,4 @@
-URL for the  frontend: https://github.com/atharvavk/RS_backend
+Backend repo: https://github.com/atharvavk/RS_backend
 
 # Frontend
 
